@@ -1,0 +1,39 @@
+{
+  "name": "@mmmoli/effect-otel-workers",
+  "version": "0.1.0",
+  "description": "Effect-TS + OpenTelemetry support for Cloudflare Workers",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format esm,cjs",
+    "test": "vitest",
+    "prepublishOnly": "pnpm build && pnpm test"
+  },
+  "keywords": [
+    "effect",
+    "effect-ts",
+    "opentelemetry",
+    "otel",
+    "cloudflare-workers",
+    "observability"
+  ],
+  "author": "Michele Memoli",
+  "license": "MIT",
+  "dependencies": {
+    "@opentelemetry/api": "^1.9.0",
+    "@opentelemetry/sdk-trace-base": "^2.1.0",
+    "effect": "^3.17.14",
+    "lefthook": "^1.13.4"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.4",
+    "@types/node": "^24.5.2",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}
