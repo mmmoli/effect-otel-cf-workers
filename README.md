@@ -1,6 +1,14 @@
 Effect TS Tracing on Cloudflare Workers
 =======================================
 
+# Setup
+
+Enable 'nodejs_compat' inside your worker:
+
+```
+"compatibility_flags": ["nodejs_compat"],
+```
+
 Let's start with the Gotchas.
 
 ## Gotchas
