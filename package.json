@@ -1,17 +1,25 @@
 {
   "name": "@mmmoli/effect-otel-workers",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Effect-TS + OpenTelemetry support for Cloudflare Workers",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmmoli/effect-otel-cf-workers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mmmoli/effect-otel-cf-workers/issues"
+  },
+  "homepage": "https://github.com/mmmoli/effect-otel-cf-workers#readme",
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "tsup src/index.ts --dts --format esm,cjs",
     "test": "vitest",
-    "prepublishOnly": "pnpm build && pnpm test"
+    "prepublishOnly": "pnpm build && pnpm test run"
   },
   "keywords": [
     "effect",
